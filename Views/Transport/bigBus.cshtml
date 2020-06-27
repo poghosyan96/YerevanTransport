@@ -1,0 +1,13 @@
+﻿@model IEnumerable<WebApplication5.Models.Transport>
+@{
+    List<Transport> transport = (List<Transport>)ViewBag.Transport;
+    ViewBag.headerImage = "~/image/autobus.jpg";
+}
+
+<h2 style="text-align:center">Ավտոբուս</h2>
+<h5 style="text-align:center">Թարմացում Jun 10, 2020</h5>
+
+@foreach (var trans in transport)
+{
+    <a href="/Transport/TransportDetails/@trans.Id"><button class="button">@trans.Number</button></a>
+}

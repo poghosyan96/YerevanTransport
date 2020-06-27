@@ -1,0 +1,224 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    background-color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background-image: url('image/mun3.jpg');
+    background-color: black;
+    background-size: 100%;
+    color: white;
+}
+
+    /* Increase the font size of the heading */
+    .header h1 {
+        font-size: 40px;
+    }
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar1{
+    height: 46px;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+    /* Style the navigation bar links */
+    .navbar1 a{
+        margin-left: 150px;
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+
+
+        /* Right-aligned link */
+        .navbar1 a.right {
+            float: right;
+        }
+
+        /* Change color on hover */
+        .navbar1 a:hover {
+            background-color: #ffaa00;
+            color: black;
+        }
+
+        /* Active/current link */
+        .navbar1 a.active {
+            background-color: #666;
+            color: white;
+        }
+
+/* Column container */
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+    -ms-flex: 30%; /* IE10 */
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* Main column */
+.main {
+    height: 1350px;
+    text-align: left;
+    -ms-flex: 70%; /* IE10 */
+    flex: 70%;
+    background-color: white;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+    height: 120px;
+    background-color: #aaa;
+    width: 100%;
+}
+
+.realimage {
+    height: auto;
+    width: auto;
+    background-color: #aaa;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+.center {
+    text-align: center;
+}
+
+.button {
+    margin: 7px;
+    color: #737373;
+    height: 30px;
+    width: 70px;
+}
+
+/*
+metro
+{
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e6e6e6;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.header {
+    height: -40px;
+    padding: 80px;
+    text-align: center;
+    background-image: url('image/metrocover.jpg');
+    background-size: 100%;
+    color: white;
+}
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+.navbar {
+    height: 46px;
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+    .navbar a {
+        margin-left: 150px;
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+
+
+        .navbar a.right {
+            float: right;
+        }
+
+        .navbar a:hover {
+            background-color: #ffaa00;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #666;
+            color: white;
+        }
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.side {
+    -ms-flex: 30%;
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {
+    text-align: left;
+    -ms-flex: 70%;
+    flex: 70%;
+    background-color: white;
+}
+
+.fakeimg {
+    height: 120px;
+    background-color: #aaa;
+    width: 100%;
+}
+
+.realimage {
+    height: auto;
+    width: auto;
+    background-color: #aaa;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #f2f2f2;
+}
+
+.center {
+    text-align: center;
+}
+*/

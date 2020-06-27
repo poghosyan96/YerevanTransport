@@ -1,0 +1,67 @@
+﻿@model WebApplication5.Models.Transport
+@{
+
+    ViewBag.headerImage = "~/image/busCover1-1.jpg";
+}
+
+
+<form asp-antiforgery="true" asp-action="Create" asp-controller="Transport">
+    <div>
+        <div class="validation" asp-validation-summary="ModelOnly"></div>
+        <div>
+            <label asp-for="Number">Number</label><br />
+            <input type="number" asp-for="Number" value="" />
+            <span asp-validation-for="Number"></span>
+        </div>
+        <div>
+            <label asp-for="City"></label><br />
+            <input asp-for="City" />
+            <span asp-validation-for="City"></span>
+        </div>
+        <div>
+            <label asp-for="Start"></label><br />
+            <input asp-for="Start" />
+            <span asp-validation-for="Start"></span>
+        </div>
+        <div>
+            <label asp-for="Process"></label><br />
+            <input asp-for="Process" />
+            <span asp-validation-for="Process"></span>
+        </div>
+        <div>
+            <label asp-for="Finish"></label><br />
+            <input asp-for="Finish" />
+            <span asp-validation-for="Finish"></span>
+        </div>
+        <div>
+            <label asp-for="StationsCount"></label><br />
+            <input asp-for="StationsCount" type="number" />
+            <span asp-validation-for="StationsCount"></span>
+        </div>
+        <div>
+            <label asp-for="Distance"></label><br />
+            <input asp-for="Distance" />
+            <span asp-validation-for="Distance"></span>
+        </div>
+        <div>
+            <label asp-for="Type"></label><br />
+            <select asp-for="Type">
+                <option value="0">bus</option>
+                <option value="1">bigbus</option>
+            </select>
+            <span asp-validation-for="Type"></span>
+        </div>
+
+
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+</form>
+
+
+@section Scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

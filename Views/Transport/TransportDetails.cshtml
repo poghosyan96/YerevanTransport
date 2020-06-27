@@ -1,0 +1,54 @@
+﻿@*@model IEnumerable<WebApplication5.Models.Transport>*@
+@{
+
+    ViewBag.headerImage = "~/image/busCover1-1.jpg";
+}
+@{
+    var transport = ViewBag.Transport;
+}
+@{
+    ViewData["Title"] = "TransportDetails";
+}
+
+<h1 style="text-align:center">TransportDetails</h1>
+
+<style>
+    .margin {
+        text-align: center;
+    }
+
+    table {
+        border: 2px solid black;
+        padding: 7px;
+    }
+</style>
+
+
+
+<div>
+    <p>
+        <span><b>Number :</b></span><span>@transport.Number</span>
+    </p>
+    <p>
+        <span><b>City :</b></span><span>@transport.City</span>
+    </p>
+    <p>
+        <span><b>Start :</b></span><span>@transport.Start</span>
+    </p>
+    <p>
+        <span><b>Process :</b></span><span>@transport.Process</span>
+    </p>
+    <p>
+        <span><b>Finish :</b></span><span>@transport.Finish</span>
+    </p>
+    <p>
+        <span><b>StationsCount :</b></span><span>@transport.StationsCount</span>
+    </p>
+    <p>
+        <span><b>Distance :</b></span><span>@transport.Distance</span>
+    </p>
+    <p>
+        <span><a href="/Transport/Delete/@transport.Id">Delete</a></span>
+        <span><a href="/Transport/Update/@transport.Id">Update</a></span>
+    </p>
+</div>

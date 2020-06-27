@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header" style="background-image: url('@Url.Content(ViewBag.headerImage)');">
+        <h1><b>Երևանի Քաղաքապետարան</b></h1>
+        <p><b>Տրանսպորտ</b> </p>
+    </div>
+
+    <div class="navbar1">
+        <a href="/transport/Bus">Երթուղային տաքսի</a>
+        <a href="/transport/bigbus">Ավտոբուս</a>
+        <a href="/transport/metro">Մետրո</a>
+        <a href="/transport/taxi">Տաքսի</a>
+    </div>
+
+    <div class="row">
+        <div class="side">
+            <h2>Երևանի մասին</h2>
+
+            <div class="fakeimg" style="height:250px;">
+                <img src="~/image/YerevanKaskade.jpg" style="height:250px;  width: 100%">
+            </div>
+
+            <p class="center">
+                Երևան, քաղաք Հայաստանի արևմուտքում՝ Հրազդանի երկու ափերին։ Հանդիսանում է պետության մայրաքաղաքն ու խոշորագույն բնակավայրը,
+                վարչաքաղաքական, տնտեսական կենտրոնը: Համաձայն Հայաստանի պաշտոնական տեղեկատվության՝ 2014 թվականի հունվարի մեկի դրությամբ ունի
+                1.068.000 բնակիչ։
+
+                Համաձայն տարածված տեսակետի՝ Երևանը հիմնադրել է Վանի թագավորության արքա Արգիշտի Ա-ն մ. թ. ա. 8-րդ դարում Էրեբունի անվամբ:
+                2018 թվականին Երևանը դարձավ 2800 տարեկան։ Բնակավայրի տարածքում հայտնաբերվել են ավելի հին քաղաքների ու ավանների ավերակներ, ինչպիսին են
+                Թեյշեբաինին, Շենգավիթը, որոնք ունեն ավելի հին թվագրում: Քաղաքի տեղանվան ծագման հետ կապված կան շատ վարկածներ, մասնավորապես, ըստ
+                ժողովրդական ավանդության, Երևանը կապվում է Նոյի անվան հետ, իբր Նոյն է այդպես կոչել առաջին ջրհեղեղից հետո երևացող ցամաքը:
+                Միջնադարում քաղաքը Մեծ Հայքի Այրարատ նահանգի Կոտայք գավառի սահմաններում էր:
+            </p>
+
+            <h3><i>Օդանավակայան</i></h3>
+
+            <div class="fakeimg" style="height:300px;">
+                <img src="~/image/ZvartnocAiroport.jpg" style="height:300px;  width: 100%">
+            </div>
+
+
+            <p>
+                Զվարթնոց միջազգային օդանավակայանը Հայաստանի ամենամեծ օդանավակայանն է։
+                Այն գտնվում է Զվարթնոցից ոչ հեռու, Երևանից 10 կմ դեպի արևմուտք։ Զվարթնոց միջազգային
+                օդանավակայանը բացվել է 1961 թվականին։ Այն կոնցեսիոն կառավարման է հանձնվել Արմենիա
+                միջազգային օդանավակայաններ ընկերությանը 30 տարի ժամկետով: Ըստ 2011 թվականի տվյալների՝
+                օդանավակայանը փոխադրել է 1.6 միլիոն ուղևոր:
+            </p>
+
+
+            <h3><i>Տրամվայ</i></h3>
+
+            <div class="fakeimg" style="height:250px;">
+                <img src="~/image/TramvaiYerevan.jpg" style="height:250px;  width: 100%">
+            </div>
+
+            <p>
+                Տրամվայրը համակարգը Երևանում գործարկվել է 1906 թվականի սեպտեմբերի 29-ին քաղաքային ձիաքարշ
+                երկաթգծի տեսքով և գործել է մինչև 2004 թվականի հունվարի 21-ը։
+
+            </p>
+
+        </div>
+
+        <div class="main">
+            @RenderBody()
+        </div>
+    </div>
+    <div class="footer">
+        <h4>This page was last edited on 22 Jun 2020</h4>
+        <h5>All rights reserved</h5>
+    </div>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

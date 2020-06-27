@@ -1,0 +1,277 @@
+﻿@model IEnumerable<WebApplication5.Models.Transport>
+@{
+    List<Transport> transport = (List<Transport>)ViewBag.Transport;
+}
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Style the body */
+        body {
+            background-color: #e6e6e6;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* Header/logo Title */
+        .header {
+            height: -40px;
+            padding: 80px;
+            text-align: center;
+            background-image: url('/image/taxiCover.jpg');
+            background-color: black;
+            background-size: 100%;
+            color: white;
+        }
+
+            /* Increase the font size of the heading */
+            .header h1 {
+                font-size: 40px;
+            }
+
+        /* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+        .navbar {
+            height:46px;
+            overflow: hidden;
+            background-color: #333;
+            position: sticky;
+            position: -webkit-sticky;
+            top: 0;
+        }
+
+            /* Style the navigation bar links */
+            .navbar a {
+                margin-left:150px;
+                float: left;
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+
+
+                /* Right-aligned link */
+                .navbar a.right {
+                    float: right;
+                }
+
+                /* Change color on hover */
+                .navbar a:hover {
+                    background-color: #ffaa00;
+                    color: black;
+                }
+
+                /* Active/current link */
+                .navbar a.active {
+                    background-color: #666;
+                    color: white;
+                }
+
+        /* Column container */
+        .row {
+            display: -ms-flexbox; /* IE10 */
+            display: flex;
+            -ms-flex-wrap: wrap; /* IE10 */
+            flex-wrap: wrap;
+        }
+
+        /* Create two unequal columns that sits next to each other */
+        /* Sidebar/left column */
+        .side {
+            -ms-flex: 30%; /* IE10 */
+            flex: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        /* Main column */
+        .main {
+            text-align: left;
+            -ms-flex: 70%; /* IE10 */
+            flex: 70%;
+            background-color: white;
+        }
+
+        /* Fake image, just for this example */
+        .fakeimg {
+            height: 120px;
+            background-color: #aaa;
+            width: 100%;
+        }
+
+        .realimage {
+            height: auto;
+            width: auto;
+            background-color: #aaa;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #f2f2f2;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1><b>Երևանի Քաղաքապետարան</b></h1>
+        <p><b>Տրանսպորտ</b> </p>
+    </div>
+
+    <div class="navbar">
+        <a href="/transport/Bus">Երթուղային տաքսի</a>
+        <a href="/transport/bigbus">Ավտոբուս</a>
+
+        <a href="/transport/metro">Մետրո</a>
+        <a href="/transport/taxi">Տաքսի</a>
+    </div>
+
+    <div class="row">
+        <div class="side">
+            <h2>Երևանի մասին</h2>
+
+            <div class="fakeimg" style="height:250px;">
+                <img src="~/image/YerevanKaskade.jpg" style="height:250px;  width: 100%">
+            </div>
+
+            <p class="center">
+                Երևան, քաղաք Հայաստանի արևմուտքում՝ Հրազդանի երկու ափերին։ Հանդիսանում է պետության մայրաքաղաքն ու խոշորագույն բնակավայրը,
+                վարչաքաղաքական, տնտեսական կենտրոնը: Համաձայն Հայաստանի պաշտոնական տեղեկատվության՝ 2014 թվականի հունվարի մեկի դրությամբ ունի
+                1.068.000 բնակիչ։
+
+                Համաձայն տարածված տեսակետի՝ Երևանը հիմնադրել է Վանի թագավորության արքա Արգիշտի Ա-ն մ. թ. ա. 8-րդ դարում Էրեբունի անվամբ:
+                2018 թվականին Երևանը դարձավ 2800 տարեկան։ Բնակավայրի տարածքում հայտնաբերվել են ավելի հին քաղաքների ու ավանների ավերակներ, ինչպիսին են
+                Թեյշեբաինին, Շենգավիթը, որոնք ունեն ավելի հին թվագրում: Քաղաքի տեղանվան ծագման հետ կապված կան շատ վարկածներ, մասնավորապես, ըստ
+                ժողովրդական ավանդության, Երևանը կապվում է Նոյի անվան հետ, իբր Նոյն է այդպես կոչել առաջին ջրհեղեղից հետո երևացող ցամաքը:
+                Միջնադարում քաղաքը Մեծ Հայքի Այրարատ նահանգի Կոտայք գավառի սահմաններում էր:
+            </p>
+
+            <h3><i>Օդանավակայան</i></h3>
+
+            <div class="fakeimg" style="height:300px;">
+                <img src="~/image/ZvartnocAiroport.jpg" style="height:300px;  width: 100%">
+            </div>
+
+
+            <p>
+                Զվարթնոց միջազգային օդանավակայանը Հայաստանի ամենամեծ օդանավակայանն է։
+                Այն գտնվում է Զվարթնոցից ոչ հեռու, Երևանից 10 կմ դեպի արևմուտք։ Զվարթնոց միջազգային
+                օդանավակայանը բացվել է 1961 թվականին։ Այն կոնցեսիոն կառավարման է հանձնվել Արմենիա
+                միջազգային օդանավակայաններ ընկերությանը 30 տարի ժամկետով: Ըստ 2011 թվականի տվյալների՝
+                օդանավակայանը փոխադրել է 1.6 միլիոն ուղևոր:
+            </p>
+
+
+            <h3><i>Տրամվայ</i></h3>
+
+            <div class="fakeimg" style="height:250px;">
+                <img src="~/image/TramvaiYerevan.jpg" style="height:250px;  width: 100%">
+            </div>
+
+            <p>
+                Տրամվայրը համակարգը Երևանում գործարկվել է 1906 թվականի սեպտեմբերի 29-ին քաղաքային ձիաքարշ
+                երկաթգծի տեսքով և գործել է մինչև 2004 թվականի հունվարի 21-ը։
+
+            </p>
+
+        </div>
+
+        <div class="main">
+            <h2 class="center">Երևանի Տաքսիներ </h2>
+            <h5 class="center">Թարմացում Jun 10, 2020</h5>
+
+            <p class="center">
+                Նախապատմություն
+                Երևանում տաքսիները բաժանվում են 2 մասի ՝ online տաքսիներ և տաքսի սերվիսներ։
+                Տաքսի սերվիսները գործում են 1990 - թ․ ից մինչ այսօր։
+                online տաքսիները մուտք գործեցին Հայաստան 2010 թ․ից և առավել տարածում գտան։
+                Հիմանական online տաքսիներն են ՝
+
+            </p>
+
+            <h1 class="center"><a href="https://play.google.com/store/apps/details?id=am.ggtaxi.main&hl=en">GG</a></h1>
+
+
+            <p>
+                ggTaxi-ն Android եւ IOS համակարգերով աշխատող հավելվածի, կայքի միջոցով ավտոմեքենա պատվիրելու համակարգ է, որը լուծում է քաղաքի բոլոր հատվածներում մատչելի ֆիքսված
+                սակագներով ավտոմեքենա պատվիրելու խնդիրը:
+
+                Ընկերությունը հիմնադրվել է 2014թ. սկզբին: gg մեքենաները հասանելի են ոչ միայն Երեւանում,
+                այլեւ ՀՀ մյուս քաղաքներում՝ Վանաձոր, Գյումրի, Էջմիածին, Աշտարակ:
+
+                gg-ի գրասենյակը երկհարկանի առանձնատուն է Երեւանում:
+                Այստեղ 20 մարդ է աշխատում՝ account manager-ներից եւ դիզայներներից մինչեւ ծրագրավորողներ
+            </p>
+
+            <div class="fakeimg" style="height:300px;">
+                <img src="~/image/ggTaxi.jpg" style="height:300px;  width: 100%">
+            </div>
+
+            <h1 class="center"><a href="https://play.google.com/store/apps/details?id=ru.yandex.taxi&hl=en">Yandex Taxi</a></h1>
+
+            <p>
+                Յանդեքս․Տաքսի (ռուս.՝ Яндекс.Такси), հեռախոսային ծրագրով կամ taxi.yandex.com կայքով տաքսիի օնլայն-պատվերների սերվիս։
+                Սերվիսը տալիս է պատվերը այն վարորդին, ով ամենամոտն է գտնվում պատվեր տվողից։
+
+                2017 թվականի դրությամբ սերվիսը աշխատում է Ռուսաստանի, Ուկրաինայի, Հայաստանի, Վրաստանի, Ղազախստանի ավելի քան 126 խոշոր քաղաքներում։
+                Ընդհանուր առմամբ այնտեղ աշխատում են ավելի քան 200 հազար վարորդ։
+
+                Սակագները տարբեր քաղաքներում տարբերվում են։ Սերվիսը ներառում է խնայողական, հարմարավետ, Կոմֆորտ+,
+                Բիզնես և Մինիվեն տարբերակները։ Պատվերի մեկնաբանություններում կարելի է նշել մի քանի տարբերակներ՝
+                դեղին գրանցման համար, որը թույլատրում է մեքենան վարել հասարակական տրանսպորտի գծերով, չծխող վարորդով,
+                օդորակիչով, կենդանու տեղափոխումով, և այլն։
+            </p>
+
+            <div class="fakeimg" style="height:300px;">
+                <img src="~/image/yandexTaxi.jpg" style="height:300px;  width: 100%">
+            </div>
+
+            <h1 class="center"><a href="https://play.google.com/store/apps/details?id=taxi.u.client&hl=en">U Taxi</a></h1>
+
+            <p>
+                Utaxi-ն առցանց տաքսի պատվիրելու համակարգ է, որը հնարավորություն է տալիս ուղևորներին և վարորդներին կապ հաստատել միամյանց հետ
+                բջջային հավելվածների և վեբկայքի միջոցով՝ ապահովելով արագ, ապահով և հարմարավետ ուղևորություն։
+                Utaxi-ն հիմնվել է 2016թ․մայիսին, իսկ գաղափարի առաջացումը և հետագա զարգացումը տեղի է ունեցել դեռևս 2015թ․ընթացքում։
+            </p>
+
+            <div class="fakeimg" style="height:300px;">
+                <img src="~/image/uTaxi.png" style="height:300px;  width: 100%">
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+
+
+        </div>
+    </div>
+    <div class="footer">
+        <h4>This page was last edited on 22 Jun 2020</h4>
+        <h5>All rights reserved</h5>
+    </div>
+
+</body>
+</html>
